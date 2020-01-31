@@ -8,7 +8,7 @@
 
 -->
 
-# capetools
+# capetools 🕶
 
 > A set of python 🐍 tools to process and model PV
 
@@ -23,9 +23,9 @@ or on editable mode, git clone this repo, and from within the repo install using
 
 `pip install -e .`
 
-## Getting started
+## Getting started 💪
 
 Fill me in please! Don't forget code examples:
 
-## Coontributing
+## Coontributing 👇
 Read [nbdev](http://github.com/fastai/nbdev) documentation please.
