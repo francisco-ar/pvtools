@@ -6,7 +6,7 @@
   
   
   <url>
-    <loc>/core/</loc>
+    <loc>http://localhost:4000/core/</loc>
   </url>
   
   
@@ -14,7 +14,7 @@
   
   
   <url>
-    <loc>/</loc>
+    <loc>http://localhost:4000/</loc>
   </url>
   
   
@@ -24,7 +24,37 @@
   
   
   <url>
-    <loc>/assets/css/style.css</loc>
+    <loc>http://localhost:4000/utils.core/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/utils.matlab_io/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/utils.missing/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/utils.pandas_hacks/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/utils.plot/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/assets/css/style.css</loc>
   </url>
   
   

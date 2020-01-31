@@ -3,10 +3,10 @@
     <channel>
         <title>lspv_dataAnalytics</title>
         <description>Basic set of python tools</description>
-        <link>/</link>
-        <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 30 Jan 2020 14:18:30 +0100</pubDate>
-        <lastBuildDate>Thu, 30 Jan 2020 14:18:30 +0100</lastBuildDate>
+        <link>http://localhost:4000/</link>
+        <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Fri, 31 Jan 2020 09:11:25 +0100</pubDate>
+        <lastBuildDate>Fri, 31 Jan 2020 09:11:25 +0100</lastBuildDate>
         <generator>Jekyll v3.8.5</generator>
         
     </channel>
