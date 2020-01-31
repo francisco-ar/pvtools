@@ -17,7 +17,7 @@ def get_tmy3(data):
 
 # Cell
 def format_output(res, cuts):
-
+    "Formats output from bifacialvf as pvfactor's one"
     front_cols = [f'No_{i+1}_RowFrontGTI' for i in range(cuts)]
     back_cols = [f'No_{i+1}_RowBackGTI' for i in range(cuts)]
     aux = pd.DataFrame(index=res.index)
