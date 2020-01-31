@@ -11,7 +11,7 @@ import pvlib
 CHAMBERY = {'Name':'Chambery', 'Latitude': 45.637001, 'Longitude': 5.881, 'Elevation': 235.0, 'TZ':-1.0}
 
 # Cell
-def get_tmy3(df: DataFrame, cols = ['dni', 'dhi', 'zenith', 'azimuth', 'elevation']):
+def get_tmy3(df: DataFrame, cols: list=['dni', 'dhi', 'zenith', 'azimuth', 'elevation']):
     "Rename to upper case dni and ghi cols"
     assert set(cols).issubset(df.columns), 'Missing columns on df'
     tmy3 = (df[cols]
@@ -31,7 +31,9 @@ def format_output_as_pvfactor(res: DataFrame, cuts: int):
     return aux[['qinc_front', 'qinc_back_mean']+[f'qinc_back_{i}' for i in range(cuts)]]
 
 # Cell
-def bifacialvf_engine_run(data,  pvarray_parameters={'rtr':8., 'sam_header':False, 'cellRows': 7}, gps_data=CHAMBERY):
+def bifacialvf_engine_run(data: DataFrame,
+                          pvarray_parameters:dict={'rtr':8., 'sam_header':False, 'cellRows': 7},
+                          gps_data:dict=CHAMBERY):
     "Run bifacialvf on data, with pvarray_parameters at location"
     outfile = 'output.csv'
     bifacialvf.simulate_inner(data, gps_data, outfile, **pvarray_parameters)

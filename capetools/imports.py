@@ -9,5 +9,6 @@ import hdf5storage
 import matplotlib.pyplot as plt
 
 #typing
-from typing import Union, Callable, Optional
+from typing import Union, Callable, Optional, Tuple
 Number = Union[float, int]
+File = Union[Path, str]

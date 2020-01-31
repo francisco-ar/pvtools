@@ -19,6 +19,8 @@ index = {"group_monthly": "01_utils.pandas_hacks.ipynb",
          "dict2tuples": "03_utils.matlab_io.ipynb",
          "make_datetime_index": "03_utils.matlab_io.ipynb",
          "mat2df": "03_utils.matlab_io.ipynb",
+         "read_tmy": "03_utils.tmy.ipynb",
+         "read_pvgis": "03_utils.tmy.ipynb",
          "plot_missing": "04_utils.missing.ipynb",
          "std_outliers": "04_utils.missing.ipynb",
          "diff_outliers": "04_utils.missing.ipynb",
@@ -33,13 +35,19 @@ index = {"group_monthly": "01_utils.pandas_hacks.ipynb",
          "CHAMBERY": "06_modelling.mybifacialvf.ipynb",
          "get_tmy3": "06_modelling.mybifacialvf.ipynb",
          "format_output_as_pvfactor": "06_modelling.mybifacialvf.ipynb",
-         "bifacialvf_engine_run": "06_modelling.mybifacialvf.ipynb"}
+         "bifacialvf_engine_run": "06_modelling.mybifacialvf.ipynb",
+         "system_def": "07_modelling.mypvfactors.ipynb",
+         "get_index": "07_modelling.mypvfactors.ipynb",
+         "debug_pvarray": "07_modelling.mypvfactors.ipynb",
+         "join_sun": "07_modelling.mypvfactors.ipynb"}
 
 modules = ["utils/pandas_hacks.py",
            "utils/matlab_io.py",
+           "utils/tmy.py",
            "utils/missing.py",
            "utils/plot.py",
-           "modelling/mybifacialvf.py"]
+           "modelling/mybifacialvf.py",
+           "modelling/mypvfactors.py"]
 
 doc_url = "https://tcapelle.github.io/capetools/"
 
