@@ -1,11 +1,15 @@
 {
-  "capetools": {
-    "Overview": "/",
+  "Getting Started": {
+    "Overview": "/"
+  },
+  "Utils":{
     "Core": "/utils.core",
     "Pandas functions and hacks": "/utils.pandas_hacks",
     "Matlab IO": "/utils.matlab_io",
     "Detect Missing values": "/utils.missing",
-    "Plotting and Visualizing": "/utils.plot",
+    "Plotting and Visualizing": "/utils.plot"
+  },
+  "Bifacial Modelling": {
     "bifacialvf modelling": "/modelling.mybifacialvf"
   }
 }
