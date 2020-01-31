@@ -10,10 +10,10 @@
 
 # capetools
 
-> A set of tools to process and model PV
+> A set of python 🐍 tools to process and model PV
 
 
-I put together a set of tools used to clean data and model bifacial systems using [pvfactors](http://github.com/SUNPOWER/pvfactors), [pvlib](https://github.com/pvlib/pvlib-python) and [bifacialvf](http://bifacialvf)
+I put together a set of tools used to clean data and model bifacial systems using [pvfactors](http://github.com/SUNPOWER/pvfactors), [pvlib](https://github.com/pvlib/pvlib-python) and [bifacialvf](http://bifacialvf) 🌞
 
 ## Install
 
