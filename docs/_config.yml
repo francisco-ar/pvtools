@@ -1,8 +1,8 @@
-repository: tc256760/lspv_dataAnalytics
+repository: tcapelle/capetools
 output: web
-topnav_title: lspv_dataAnalytics
-site_title: lspv_dataAnalytics
-company_name: CEA
+topnav_title: capetools
+site_title: capetools
+company_name: Thomas Capelle
 description: Basic set of python tools
 # Set to false to disable KaTeX math
 use_math: true

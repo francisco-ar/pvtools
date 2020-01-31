@@ -8,37 +8,34 @@
 
 -->
 
-# Project name here
+# capetools
 
-> Summary description here.
+> A set of tools to process and model PV
 
-
-This file will become your README and also the index of your documentation.
-
-## Install
-
-`pip install your_project_name`
-
-## How to use
-
-Fill me in please! Don't forget code examples:
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
+```python
+#hide
 ```
-1+1
-```
-
-</div>
-<div class="output_area" markdown="1">
-
-
-
-
-    2
-
-
 
 </div>
 
 </div>
+
+I put together a set of tools used to clean data and model bifacial systems using [pvfactors](http://github.com/SUNPOWER/pvfactors), [pvlib](http://github.com/NREL/pvlib) and [bifacialvf](http://bifacialvf)
+
+## Install
+
+`pip install capetools`
+
+or on editable mode, git clone this repo, and from within the repo install using:
+
+`pip install -e .`
+
+## Getting started
+
+Fill me in please! Don't forget code examples:
+
+## Coontributing
+Read [nbdev](http://github.com/fastai/nbdev) documentation please.

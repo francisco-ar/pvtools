@@ -1,10 +1,10 @@
-SRC = $(wildcard ./*.ipynb)
+SRC = $(wildcard nbs/*.ipynb)
 
-all: lspv_dataAnalytics docs
+all: capetools docs
 
-lspv_dataAnalytics: $(SRC)
+capetools: $(SRC)
 	nbdev_build_lib
-	touch lspv_dataAnalytics
+	touch capetools
 
 docs_serve: docs
 	cd docs && bundle exec jekyll serve

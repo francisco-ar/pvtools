@@ -1,6 +1,10 @@
 {
-  "lspv_dataAnalytics": {
+  "capetools": {
     "Overview": "/",
-    "module name here": "/core"
+    "Core": "/utils.core",
+    "Pandas functions and hacks": "/utils.pandas_hacks",
+    "Matlab IO": "/utils.matlab_io",
+    "Detect Missing values": "/utils.missing",
+    "Plotting and Visualizing": "/utils.plot"
   }
 }

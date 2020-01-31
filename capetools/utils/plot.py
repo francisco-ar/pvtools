@@ -61,15 +61,14 @@ def add_value_labels(ax, labels=None, spacing=5):
     return
 
 # Cell
-def plot_yearly_gain(s1: Series, s2: Series, resample='monthly'):
-    "Plot gain"
-    if resample=='monthly':
-        s1 = monthly(s1)/1000
-        s2 = monthly(s2)/1000
+def plot_yearly_gain(s1: Series, s2: Series, labels=None):
+    "Plot bar chart with gain percentage"
+    labels = ifnone(labels, ['s1', 's2'])
     _, ax = plt.subplots(figsize=(12,5))
-    (pd.concat([s1, s2], axis=1,sort=False)
+    (pd.concat([s1, s2-s1], axis=1,sort=False)
     .plot.bar(ax=ax, stacked=True, color=['blue', 'violet']))
     ax.set_title('Gain')
-    gain = 100*(s2/s1)
+    ax.legend(labels)
+    gain = 100*(s2/s1-1)
     add_value_labels(ax, gain, spacing=5)
     return

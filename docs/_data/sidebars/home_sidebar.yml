@@ -10,9 +10,21 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: module name here
-      url: /core
+      title: Core
+      url: /utils.core
+    - output: web,pdf
+      title: Pandas functions and hacks
+      url: /utils.pandas_hacks
+    - output: web,pdf
+      title: Matlab IO
+      url: /utils.matlab_io
+    - output: web,pdf
+      title: Detect Missing values
+      url: /utils.missing
+    - output: web,pdf
+      title: Plotting and Visualizing
+      url: /utils.plot
     output: web
-    title: lspv_dataAnalytics
+    title: capetools
   output: web
   title: Sidebar

@@ -25,14 +25,19 @@ index = {"group_monthly": "01_utils.pandas_hacks.ipynb",
          "is_day": "04_utils.missing.ipynb",
          "comp": "04_utils.missing.ipynb",
          "view_anomaly": "04_utils.missing.ipynb",
+         "percentile_cutoff": "04_utils.missing.ipynb",
+         "MinMaxRemoval": "04_utils.missing.ipynb",
          "plot2series": "05_utils.plot.ipynb",
          "add_value_labels": "05_utils.plot.ipynb",
-         "plot_yearly_gain": "05_utils.plot.ipynb"}
+         "plot_yearly_gain": "05_utils.plot.ipynb",
+         "get_tmy3": "06_modelling.mybifacialvf.ipynb",
+         "CHAMBERY": "06_modelling.mybifacialvf.ipynb"}
 
 modules = ["utils/pandas_hacks.py",
            "utils/matlab_io.py",
            "utils/missing.py",
-           "utils/plot.py"]
+           "utils/plot.py",
+           "modelling/mybifacialvf.py"]
 
 doc_url = "https://tcapelle.github.io/capetools/"
 
