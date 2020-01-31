@@ -30,8 +30,8 @@ index = {"group_monthly": "01_utils.pandas_hacks.ipynb",
          "plot2series": "05_utils.plot.ipynb",
          "add_value_labels": "05_utils.plot.ipynb",
          "plot_yearly_gain": "05_utils.plot.ipynb",
-         "get_tmy3": "06_modelling.mybifacialvf.ipynb",
-         "CHAMBERY": "06_modelling.mybifacialvf.ipynb"}
+         "CHAMBERY": "06_modelling.mybifacialvf.ipynb",
+         "get_tmy3": "06_modelling.mybifacialvf.ipynb"}
 
 modules = ["utils/pandas_hacks.py",
            "utils/matlab_io.py",

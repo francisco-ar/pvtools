@@ -24,6 +24,9 @@ entries:
     - output: web,pdf
       title: Plotting and Visualizing
       url: /utils.plot
+    - output: web,pdf
+      title: bifacialvf modelling
+      url: /modelling.mybifacialvf
     output: web
     title: capetools
   output: web
