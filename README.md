@@ -12,18 +12,8 @@
 
 > A set of tools to process and model PV
 
-<div class="codecell" markdown="1">
-<div class="input_area" markdown="1">
 
-```python
-#hide
-```
-
-</div>
-
-</div>
-
-I put together a set of tools used to clean data and model bifacial systems using [pvfactors](http://github.com/SUNPOWER/pvfactors), [pvlib](http://github.com/NREL/pvlib) and [bifacialvf](http://bifacialvf)
+I put together a set of tools used to clean data and model bifacial systems using [pvfactors](http://github.com/SUNPOWER/pvfactors), [pvlib](https://github.com/pvlib/pvlib-python) and [bifacialvf](http://bifacialvf)
 
 ## Install
 
