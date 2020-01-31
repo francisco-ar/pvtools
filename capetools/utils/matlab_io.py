@@ -4,7 +4,7 @@ __all__ = ['read_mat', 'datetime_mtopy', 'get_components', 'dict2tuples', 'make_
 
 # Cell
 from ..imports import *
-from .pandas_hacks import reduce_meme_usage
+from .pandas_hacks import reduce_mem_usage
 import hdf5storage
 import datetime
 

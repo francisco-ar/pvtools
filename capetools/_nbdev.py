@@ -25,17 +25,17 @@ index = {"group_monthly": "01_utils.pandas_hacks.ipynb",
          "is_day": "04_utils.missing.ipynb",
          "comp": "04_utils.missing.ipynb",
          "view_anomaly": "04_utils.missing.ipynb",
-         "plot_2series": "05_utils.plot.ipynb",
+         "plot2series": "05_utils.plot.ipynb",
          "add_value_labels": "05_utils.plot.ipynb",
-         "plot_Yearly_gain": "05_utils.plot.ipynb"}
+         "plot_yearly_gain": "05_utils.plot.ipynb"}
 
 modules = ["utils/pandas_hacks.py",
            "utils/matlab_io.py",
            "utils/missing.py",
            "utils/plot.py"]
 
-doc_url = "http://www.somewhere_on_the_internet.org/"
+doc_url = "https://tcapelle.github.io/capetools/"
 
-git_url = "https://codev-tuleap.intra.cea.fr/plugins/git/ines-toolbox/lspv_dataAnalytics"
+git_url = "https://github.com/tcapelle/capetools/tree/master/"
 
 def custom_doc_links(name): return None
