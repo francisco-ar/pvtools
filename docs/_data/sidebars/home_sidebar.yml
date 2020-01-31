@@ -9,6 +9,9 @@ entries:
     - output: web,pdf
       title: Overview
       url: /
+    output: web
+    title: Getting Started
+  - folderitems:
     - output: web,pdf
       title: Core
       url: /utils.core
@@ -24,10 +27,13 @@ entries:
     - output: web,pdf
       title: Plotting and Visualizing
       url: /utils.plot
+    output: web
+    title: Utils
+  - folderitems:
     - output: web,pdf
       title: bifacialvf modelling
       url: /modelling.mybifacialvf
     output: web
-    title: capetools
+    title: Bifacial Modelling
   output: web
   title: Sidebar
