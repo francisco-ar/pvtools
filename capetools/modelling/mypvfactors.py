@@ -4,6 +4,7 @@ __all__ = ['system_def', 'get_index', 'debug_pvarray', 'join_sun']
 
 # Cell
 from ..imports import *
+from ..utils.tmy import *
 import pvfactors
 from pvfactors.geometry import OrderedPVArray
 import pvlib
@@ -77,7 +78,6 @@ def join_sun(tmy_data: DataFrame, sunpos:DataFrame, pvarray_params:dict)->DataFr
     data['surface_tilt'] = pvarray_params['surface_tilt']
     data['surface_azimuth'] = pvarray_params['surface_azimuth']
     data['albedo'] =  pvarray_params['albedo']
-
     #doing some patching
     idxs = (data.zenith<90) & (data.ghi<10)
     data.loc[idxs, 'zenith'] = 91.

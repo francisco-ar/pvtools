@@ -4,6 +4,7 @@ __all__ = ['CHAMBERY', 'get_tmy3', 'format_output_as_pvfactor', 'bifacialvf_engi
 
 # Cell
 from ..imports import *
+from ..utils.tmy import read_tmy
 import bifacialvf
 import pvlib
 
