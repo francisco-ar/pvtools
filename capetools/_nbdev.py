@@ -38,8 +38,10 @@ index = {"group_monthly": "01_utils.pandas_hacks.ipynb",
          "bifacialvf_engine_run": "06_modelling.mybifacialvf.ipynb",
          "system_def": "07_modelling.mypvfactors.ipynb",
          "get_index": "07_modelling.mypvfactors.ipynb",
+         "plot_idx": "07_modelling.mypvfactors.ipynb",
          "debug_pvarray": "07_modelling.mypvfactors.ipynb",
-         "join_sun": "07_modelling.mypvfactors.ipynb"}
+         "join_sun": "07_modelling.mypvfactors.ipynb",
+         "get_data": "07_modelling.mypvfactors.ipynb"}
 
 modules = ["utils/pandas_hacks.py",
            "utils/matlab_io.py",
