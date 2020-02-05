@@ -29,7 +29,7 @@ or on editable mode, git clone this repo, and from within the repo install using
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 from capetools.imports import *
 from capetools.utils.missing import *
 from capetools.utils.tmy import read_pvgis
@@ -42,7 +42,7 @@ from capetools.modelling.mypvfactors import *
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 PATH = Path.cwd().parent/'data'
 fname = PATH/'pvgis_tmy_chambery.csv'
 ```
@@ -55,7 +55,7 @@ We will ingest a PVGIS downloaded file for Chambery
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 gps_data, months, tmy_data = read_pvgis(fname)
 ```
 
@@ -65,7 +65,7 @@ gps_data, months, tmy_data = read_pvgis(fname)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 tmy_data.head()
 ```
 
@@ -191,7 +191,7 @@ We can quickly look at missing data:
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 plot_missing(tmy_data)
 ```
 
@@ -212,7 +212,7 @@ as expected, no missing data !
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 params = system_def(n_pvrows=3); params
 ```
 
@@ -245,7 +245,7 @@ params = system_def(n_pvrows=3); params
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 data = get_data(fname, params)
 ```
 
@@ -255,9 +255,26 @@ data = get_data(fname, params)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
+```python
+pvarray = run_pvfactors_simulation(data, params)
 ```
-pvarray = run_simulation(data, params)
-```
+
+</div>
+<div class="output_area" markdown="1">
+
+    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:181: RuntimeWarning: invalid value encountered in true_divide
+      vf_pvrow_to_gnd_surf * pvrow_surf_length / gnd_surf_length, 0.)
+    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:181: RuntimeWarning: divide by zero encountered in true_divide
+      vf_pvrow_to_gnd_surf * pvrow_surf_length / gnd_surf_length, 0.)
+    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:531: RuntimeWarning: divide by zero encountered in true_divide
+      vf_1_to_2 = (d1 + d2 - l1 - l2) / (2. * width)
+    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:531: RuntimeWarning: invalid value encountered in true_divide
+      vf_1_to_2 = (d1 + d2 - l1 - l2) / (2. * width)
+    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:607: RuntimeWarning: invalid value encountered in true_divide
+      vf_1_to_2 = np.abs(sum_2 - sum_1) / (2. * width_1)
+    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:222: RuntimeWarning: invalid value encountered in true_divide
+      vf_i_to_j * length_i / length_j, 0.)
+
 
 </div>
 
@@ -265,7 +282,7 @@ pvarray = run_simulation(data, params)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 ax = plot_idx(pvarray)
 ax.set_xlim(-2, 10)
 ```

@@ -362,10 +362,35 @@ summary: "A set of python 🐍 tools to process and model PV"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pvarray</span> <span class="o">=</span> <span class="n">run_simulation</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pvarray</span> <span class="o">=</span> <span class="n">run_pvfactors_simulation</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:181: RuntimeWarning: invalid value encountered in true_divide
+  vf_pvrow_to_gnd_surf * pvrow_surf_length / gnd_surf_length, 0.)
+/home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:181: RuntimeWarning: divide by zero encountered in true_divide
+  vf_pvrow_to_gnd_surf * pvrow_surf_length / gnd_surf_length, 0.)
+/home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:531: RuntimeWarning: divide by zero encountered in true_divide
+  vf_1_to_2 = (d1 + d2 - l1 - l2) / (2. * width)
+/home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:531: RuntimeWarning: invalid value encountered in true_divide
+  vf_1_to_2 = (d1 + d2 - l1 - l2) / (2. * width)
+/home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:607: RuntimeWarning: invalid value encountered in true_divide
+  vf_1_to_2 = np.abs(sum_2 - sum_1) / (2. * width_1)
+/home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:222: RuntimeWarning: invalid value encountered in true_divide
+  vf_i_to_j * length_i / length_j, 0.)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
