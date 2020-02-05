@@ -29,7 +29,7 @@ or on editable mode, git clone this repo, and from within the repo install using
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 from capetools.imports import *
 from capetools.utils.missing import *
 from capetools.utils.tmy import read_pvgis
@@ -43,7 +43,7 @@ from capetools.modelling.mybifacialvf import *
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 PATH = Path.cwd().parent/'data'
 fname = PATH/'pvgis_tmy_chambery.csv'
 ```
@@ -56,7 +56,7 @@ We will ingest a PVGIS downloaded file for Chambery
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 gps_data, months, tmy_data = read_pvgis(fname)
 ```
 
@@ -66,7 +66,7 @@ gps_data, months, tmy_data = read_pvgis(fname)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 tmy_data.head()
 ```
 
@@ -192,7 +192,7 @@ We can quickly look at missing data:
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 plot_missing(tmy_data)
 ```
 
@@ -209,11 +209,13 @@ plot_missing(tmy_data)
 
 as expected, no missing data !
 
-### Simulation
+## Simulations
+
+### pvfactors
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 params = system_def(n_pvrows=3); params
 ```
 
@@ -246,7 +248,7 @@ params = system_def(n_pvrows=3); params
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 data = get_data(fname, params)
 ```
 
@@ -256,7 +258,7 @@ data = get_data(fname, params)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 pvarray = run_pvfactors_simulation(data, params)
 ```
 
@@ -283,7 +285,7 @@ pvarray = run_pvfactors_simulation(data, params)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 ax = plot_idx(pvarray)
 ax.set_xlim(-2, 10)
 ```
@@ -299,7 +301,7 @@ ax.set_xlim(-2, 10)
 
 
 
-![png](docs/images/output_19_1.png)
+![png](docs/images/output_20_1.png)
 
 
 </div>
@@ -308,14 +310,176 @@ ax.set_xlim(-2, 10)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
-run_bifacialvf_simulation(data)
+```
+res_pvfactors = individual_report(pvarray, index=data.index)
+```
+
+</div>
+
+</div>
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```
+res_pvfactors.head()
 ```
 
 </div>
 <div class="output_area" markdown="1">
 
-      0%|          | 0/8760 [00:00<?, ?it/s]
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>qinc_0</th>
+      <th>qinc_1</th>
+      <th>qinc_2</th>
+      <th>qinc_3</th>
+      <th>qinc_4</th>
+      <th>qinc_5</th>
+      <th>qinc_6</th>
+      <th>qinc_front</th>
+      <th>qinc_back</th>
+    </tr>
+    <tr>
+      <th>time(UTC)</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-01-01 00:00:00</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2019-01-01 01:00:00</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2019-01-01 02:00:00</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2019-01-01 03:00:00</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2019-01-01 04:00:00</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+</div>
+
+</div>
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```
+res_pvfactors['21 June 2019'].plot();
+```
+
+</div>
+<div class="output_area" markdown="1">
+
+
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x7f0d9c1a2a10>
+
+
+
+
+![png](docs/images/output_23_1.png)
+
+
+</div>
+
+</div>
+
+### bifacialvf
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```
+res_bifacialvf = run_bifacialvf_simulation(data)
+```
+
+</div>
+<div class="output_area" markdown="1">
+
+      0%|          | 0/8760 [00:00<?, ?it/s]/home/tc256760/Apps/bifacialvf/bifacialvf/vf.py:300: RuntimeWarning: divide by zero encountered in double_scalars
+      projectedX2 = PcellX + np.float64(PcellY) / math.tan(startElvDown);      # Projection of ElvDown to ground in +x direction (X1 and X2 opposite nomenclature for front irradiance method)
+      0%|          | 37/8760 [00:00<00:24, 358.00it/s]
 
      
     ********* 
@@ -328,43 +492,36 @@ run_bifacialvf_simulation(data)
      
 
 
+    100%|██████████| 8760/8760 [00:27<00:00, 314.22it/s]
+
+    Finished
+
+
     
 
 
+</div>
 
-    ---------------------------------------------------------------------------
+</div>
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
 
-    AttributeError                            Traceback (most recent call last)
+```
+res_bifacialvf['21 June 2019'].plot();
+```
 
-    <ipython-input-13-91c0ec9e828c> in <module>
-    ----> 1 run_bifacialvf_simulation(data)
-    
-
-    ~/Documents/capetools/nbs/capetools/modelling/mybifacialvf.py in run_bifacialvf_simulation(data, pvarray_parameters, gps_data)
-         38     "Run bifacialvf on data, with pvarray_parameters at location"
-         39     outfile = 'output.csv'
-    ---> 40     bifacialvf.simulate_inner(data, gps_data, outfile, **pvarray_parameters)
-         41     return (pd.read_csv(outfile, header=2, index_col='date', parse_dates=True)
-         42             .pipe(format_output_as_pvfactor, cuts=pvarray_parameters['cellRows']))
+</div>
+<div class="output_area" markdown="1">
 
 
-    ~/Apps/bifacialvf/bifacialvf/bifacialvf.py in simulate_inner(myTMY3, meta, writefiletitle, beta, sazm, C, D, rowType, transFactor, cellRows, PVfrontSurface, PVbackSurface, albedo, tracking, backtrack, rtr, max_angle, sam_header)
-        211             hour = myTimestamp.hour
-        212             minute = myTimestamp.minute
-    --> 213             dni = myTMY3.DNI[rl]
-        214             dhi = myTMY3.DHI[rl]
-        215 
 
 
-    ~/anaconda3/envs/fastai/lib/python3.7/site-packages/pandas/core/generic.py in __getattr__(self, name)
-       5177             if self._info_axis._can_hold_identifiers_and_holds_name(name):
-       5178                 return self[name]
-    -> 5179             return object.__getattribute__(self, name)
-       5180 
-       5181     def __setattr__(self, name, value):
+    <matplotlib.axes._subplots.AxesSubplot at 0x7f0d9b868b10>
 
 
-    AttributeError: 'DataFrame' object has no attribute 'DNI'
+
+
+![png](docs/images/output_26_1.png)
 
 
 </div>

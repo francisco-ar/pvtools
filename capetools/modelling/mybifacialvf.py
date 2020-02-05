@@ -28,17 +28,18 @@ def format_output_as_pvfactor(res: DataFrame, cuts: int):
     back_cols = [f'No_{i+1}_RowBackGTI' for i in range(cuts)]
     aux = pd.DataFrame(index=res.index)
     aux['qinc_front'] = res[front_cols].mean(axis=1)
-    aux['qinc_back_mean'] = res[back_cols].mean(axis=1)
+    aux['qinc_back'] = res[back_cols].mean(axis=1)
     aux[back_cols] = res[back_cols]
     aux =  aux.rename(columns=dict(zip(back_cols,[f'qinc_back_{i}' for i in range(cuts-1, -1, -1)] )))
-    return aux[['qinc_front', 'qinc_back_mean']+[f'qinc_back_{i}' for i in range(cuts)]]
+    return aux[['qinc_front', 'qinc_back']+[f'qinc_back_{i}' for i in range(cuts)]]
 
 # Cell
 def run_bifacialvf_simulation(data: DataFrame,
-                          pvarray_parameters:dict={'rtr':8., 'sam_header':False, 'cellRows': 7},
+                          pvarray_parameters:dict={'rtr':8.,  'cellRows': 7, 'albedo':0.4},
                           gps_data:dict=CHAMBERY):
     "Run bifacialvf on data, with pvarray_parameters at location"
     outfile = 'output.csv'
+    pvarray_parameters.update({'sam_header':False})
     bifacialvf.simulate_inner(rename_cols(data), gps_data, outfile, **pvarray_parameters)
     return (pd.read_csv(outfile, header=2, index_col='date', parse_dates=True)
             .pipe(format_output_as_pvfactor, cuts=pvarray_parameters['cellRows']))
