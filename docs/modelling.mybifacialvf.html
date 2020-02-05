@@ -76,7 +76,7 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(#1) [Path(&#39;/home/tc256760/Documents/capetools/data/sample_data.hdf&#39;)]</pre>
+<pre>(#2) [Path(&#39;/home/tc256760/Documents/capetools/data/pvgis_tmy_chambery.csv&#39;),Path(&#39;/home/tc256760/Documents/capetools/data/sample_data.hdf&#39;)]</pre>
 </div>
 
 </div>
@@ -124,30 +124,20 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>temp_air</th>
-      <th>wind_speed</th>
-      <th>wind_dir</th>
       <th>ghi</th>
       <th>dni</th>
       <th>dhi</th>
-      <th>ghi30</th>
-      <th>ref_cell_30</th>
+      <th>temp_air</th>
+      <th>wind_speed</th>
+      <th>wind_dir</th>
       <th>pressure</th>
       <th>humidity</th>
-      <th>apparent_zenith</th>
       <th>zenith</th>
-      <th>apparent_elevation</th>
       <th>elevation</th>
       <th>azimuth</th>
-      <th>equation_of_time</th>
     </tr>
     <tr>
       <th>Date UTC</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -164,98 +154,73 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
   <tbody>
     <tr>
       <th>2019-01-01 00:00:00</th>
+      <td>-0.83</td>
+      <td>0.0</td>
+      <td>-0.83</td>
       <td>4.39</td>
       <td>1.87</td>
       <td>230.1</td>
-      <td>-0.83</td>
-      <td>0.0</td>
-      <td>-0.83</td>
-      <td>-1.17</td>
-      <td>0.0</td>
       <td>1004.92</td>
       <td>86.8</td>
-      <td>157.028814</td>
-      <td>157.028814</td>
-      <td>-67.028814</td>
-      <td>-67.028814</td>
-      <td>12.053823</td>
-      <td>-3.195874</td>
+      <td>157.029</td>
+      <td>-67.029</td>
+      <td>12.054</td>
     </tr>
     <tr>
       <th>2019-01-01 01:00:00</th>
-      <td>4.33</td>
-      <td>2.87</td>
-      <td>228.9</td>
       <td>-0.93</td>
       <td>0.0</td>
       <td>-0.83</td>
-      <td>-1.06</td>
-      <td>0.0</td>
+      <td>4.33</td>
+      <td>2.87</td>
+      <td>228.9</td>
       <td>1004.94</td>
       <td>86.8</td>
-      <td>152.142520</td>
-      <td>152.142520</td>
-      <td>-62.142520</td>
-      <td>-62.142520</td>
-      <td>42.533373</td>
-      <td>-3.215687</td>
+      <td>152.143</td>
+      <td>-62.143</td>
+      <td>42.533</td>
     </tr>
     <tr>
       <th>2019-01-01 02:00:00</th>
+      <td>-0.83</td>
+      <td>0.0</td>
+      <td>-0.83</td>
       <td>4.29</td>
       <td>2.86</td>
       <td>229.4</td>
-      <td>-0.83</td>
-      <td>0.0</td>
-      <td>-0.83</td>
-      <td>-1.17</td>
-      <td>0.0</td>
       <td>1004.68</td>
       <td>86.7</td>
-      <td>143.742340</td>
-      <td>143.742340</td>
-      <td>-53.742340</td>
-      <td>-53.742340</td>
-      <td>63.390006</td>
-      <td>-3.235491</td>
+      <td>143.742</td>
+      <td>-53.742</td>
+      <td>63.390</td>
     </tr>
     <tr>
       <th>2019-01-01 03:00:00</th>
+      <td>-0.83</td>
+      <td>0.0</td>
+      <td>-0.83</td>
       <td>4.15</td>
       <td>2.04</td>
       <td>186.0</td>
-      <td>-0.83</td>
-      <td>0.0</td>
-      <td>-0.83</td>
-      <td>-1.06</td>
-      <td>0.0</td>
       <td>1003.99</td>
       <td>85.7</td>
-      <td>133.848157</td>
-      <td>133.848157</td>
-      <td>-43.848157</td>
-      <td>-43.848157</td>
-      <td>78.092116</td>
-      <td>-3.255288</td>
+      <td>133.848</td>
+      <td>-43.848</td>
+      <td>78.092</td>
     </tr>
     <tr>
       <th>2019-01-01 04:00:00</th>
-      <td>3.85</td>
-      <td>1.91</td>
-      <td>200.9</td>
       <td>-0.72</td>
       <td>0.0</td>
       <td>-0.83</td>
-      <td>-0.85</td>
-      <td>0.0</td>
+      <td>3.85</td>
+      <td>1.91</td>
+      <td>200.9</td>
       <td>1003.76</td>
       <td>87.5</td>
-      <td>123.435454</td>
-      <td>123.435454</td>
-      <td>-33.435454</td>
-      <td>-33.435454</td>
-      <td>89.729489</td>
-      <td>-3.275076</td>
+      <td>123.435</td>
+      <td>-33.435</td>
+      <td>89.729</td>
     </tr>
   </tbody>
 </table>
@@ -280,7 +245,7 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_tmy3" class="doc_header"><code>get_tmy3</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L15" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_tmy3</code>(<strong><code>df</code></strong>:<code>DataFrame</code>, <strong><code>cols</code></strong>:<code>list</code>=<em><code>['dni', 'dhi', 'zenith', 'azimuth', 'elevation']</code></em>)</p>
+<h4 id="rename_cols" class="doc_header"><code>rename_cols</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L15" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rename_cols</code>(<strong><code>df</code></strong>:<code>DataFrame</code>, <strong><code>cols</code></strong>:<code>list</code>=<em><code>['dni', 'dhi', 'zenith', 'azimuth', 'elevation']</code></em>)</p>
 </blockquote>
 <p>Rename to upper case dni and ghi cols</p>
 
@@ -297,7 +262,38 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">get_tmy3</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Index([&#39;ghi&#39;, &#39;dni&#39;, &#39;dhi&#39;, &#39;temp_air&#39;, &#39;wind_speed&#39;, &#39;wind_dir&#39;, &#39;pressure&#39;,
+       &#39;humidity&#39;, &#39;zenith&#39;, &#39;elevation&#39;, &#39;azimuth&#39;],
+      dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">rename_cols</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -324,7 +320,7 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="format_output_as_pvfactor" class="doc_header"><code>format_output_as_pvfactor</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L23" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>format_output_as_pvfactor</code>(<strong><code>res</code></strong>:<code>DataFrame</code>, <strong><code>cuts</code></strong>:<code>int</code>)</p>
+<h4 id="format_output_as_pvfactor" class="doc_header"><code>format_output_as_pvfactor</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L25" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>format_output_as_pvfactor</code>(<strong><code>res</code></strong>:<code>DataFrame</code>, <strong><code>cuts</code></strong>:<code>int</code>)</p>
 </blockquote>
 <p>Formats output from bifacialvf as pvfactor's one</p>
 
@@ -354,7 +350,7 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="bifacialvf_engine_run" class="doc_header"><code>bifacialvf_engine_run</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L35" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>bifacialvf_engine_run</code>(<strong><code>data</code></strong>:<code>DataFrame</code>, <strong><code>pvarray_parameters</code></strong>:<code>dict</code>=<em><code>{'rtr': 8.0, 'sam_header': False, 'cellRows': 7}</code></em>, <strong><code>gps_data</code></strong>:<code>dict</code>=<em><code>{'Name': 'Chambery', 'Latitude': 45.637001, 'Longitude': 5.881, 'Elevation': 235.0, 'TZ': -1.0}</code></em>)</p>
+<h4 id="run_bifacialvf_simulation" class="doc_header"><code>run_bifacialvf_simulation</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L37" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>run_bifacialvf_simulation</code>(<strong><code>data</code></strong>:<code>DataFrame</code>, <strong><code>pvarray_parameters</code></strong>:<code>dict</code>=<em><code>{'rtr': 8.0, 'sam_header': False, 'cellRows': 7}</code></em>, <strong><code>gps_data</code></strong>:<code>dict</code>=<em><code>{'Name': 'Chambery', 'Latitude': 45.637001, 'Longitude': 5.881, 'Elevation': 235.0, 'TZ': -1.0}</code></em>)</p>
 </blockquote>
 <p>Run bifacialvf on data, with pvarray_parameters at location</p>
 
@@ -371,7 +367,7 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">output</span> <span class="o">=</span> <span class="n">bifacialvf_engine_run</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;June 2019&#39;</span><span class="p">],</span> <span class="n">gps_data</span><span class="o">=</span><span class="n">CHAMBERY</span><span class="p">,</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">output</span> <span class="o">=</span> <span class="n">run_bifacialvf_simulation</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;June 2019&#39;</span><span class="p">],</span> <span class="n">gps_data</span><span class="o">=</span><span class="n">CHAMBERY</span><span class="p">,</span> <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -384,7 +380,9 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>  2%|▏         | 16/720 [00:00&lt;00:04, 159.63it/s]</pre>
+<pre>  0%|          | 0/720 [00:00&lt;?, ?it/s]/home/tc256760/Apps/bifacialvf/bifacialvf/vf.py:300: RuntimeWarning: divide by zero encountered in double_scalars
+  projectedX2 = PcellX + np.float64(PcellY) / math.tan(startElvDown);      # Projection of ElvDown to ground in +x direction (X1 and X2 opposite nomenclature for front irradiance method)
+  2%|▏         | 17/720 [00:00&lt;00:04, 168.52it/s]</pre>
 </div>
 </div>
 
@@ -407,7 +405,7 @@ Saving into output.csv
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 720/720 [00:03&lt;00:00, 225.12it/s]</pre>
+<pre>100%|██████████| 720/720 [00:03&lt;00:00, 218.94it/s]</pre>
 </div>
 </div>
 
@@ -451,7 +449,7 @@ Saving into output.csv
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f69ddd7ed10&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f7cd59a7950&gt;</pre>
 </div>
 
 </div>

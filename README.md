@@ -34,6 +34,7 @@ from capetools.imports import *
 from capetools.utils.missing import *
 from capetools.utils.tmy import read_pvgis
 from capetools.modelling.mypvfactors import *
+from capetools.modelling.mybifacialvf import *
 ```
 
 </div>
@@ -299,6 +300,71 @@ ax.set_xlim(-2, 10)
 
 
 ![png](docs/images/output_19_1.png)
+
+
+</div>
+
+</div>
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+run_bifacialvf_simulation(data)
+```
+
+</div>
+<div class="output_area" markdown="1">
+
+      0%|          | 0/8760 [00:00<?, ?it/s]
+
+     
+    ********* 
+    Running Simulation for TMY3:  Chambery
+    Location:   Chambery
+    Lat:  45.637001  Long:  5.881  Tz  -1.0
+    Parameters: beta:  0   Sazm:  180   Height:  0.5   rtr separation:  8.0   Row type:  interior   Albedo:  0.2
+    Saving into output.csv
+     
+     
+
+
+    
+
+
+
+    ---------------------------------------------------------------------------
+
+    AttributeError                            Traceback (most recent call last)
+
+    <ipython-input-13-91c0ec9e828c> in <module>
+    ----> 1 run_bifacialvf_simulation(data)
+    
+
+    ~/Documents/capetools/nbs/capetools/modelling/mybifacialvf.py in run_bifacialvf_simulation(data, pvarray_parameters, gps_data)
+         38     "Run bifacialvf on data, with pvarray_parameters at location"
+         39     outfile = 'output.csv'
+    ---> 40     bifacialvf.simulate_inner(data, gps_data, outfile, **pvarray_parameters)
+         41     return (pd.read_csv(outfile, header=2, index_col='date', parse_dates=True)
+         42             .pipe(format_output_as_pvfactor, cuts=pvarray_parameters['cellRows']))
+
+
+    ~/Apps/bifacialvf/bifacialvf/bifacialvf.py in simulate_inner(myTMY3, meta, writefiletitle, beta, sazm, C, D, rowType, transFactor, cellRows, PVfrontSurface, PVbackSurface, albedo, tracking, backtrack, rtr, max_angle, sam_header)
+        211             hour = myTimestamp.hour
+        212             minute = myTimestamp.minute
+    --> 213             dni = myTMY3.DNI[rl]
+        214             dhi = myTMY3.DHI[rl]
+        215 
+
+
+    ~/anaconda3/envs/fastai/lib/python3.7/site-packages/pandas/core/generic.py in __getattr__(self, name)
+       5177             if self._info_axis._can_hold_identifiers_and_holds_name(name):
+       5178                 return self[name]
+    -> 5179             return object.__getattribute__(self, name)
+       5180 
+       5181     def __setattr__(self, name, value):
+
+
+    AttributeError: 'DataFrame' object has no attribute 'DNI'
 
 
 </div>
