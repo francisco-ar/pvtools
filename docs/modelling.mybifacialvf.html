@@ -280,7 +280,7 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_tmy3" class="doc_header"><code>get_tmy3</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L14" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_tmy3</code>(<strong><code>df</code></strong>:<code>DataFrame</code>, <strong><code>cols</code></strong>:<code>list</code>=<em><code>['dni', 'dhi', 'zenith', 'azimuth', 'elevation']</code></em>)</p>
+<h4 id="get_tmy3" class="doc_header"><code>get_tmy3</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L15" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_tmy3</code>(<strong><code>df</code></strong>:<code>DataFrame</code>, <strong><code>cols</code></strong>:<code>list</code>=<em><code>['dni', 'dhi', 'zenith', 'azimuth', 'elevation']</code></em>)</p>
 </blockquote>
 <p>Rename to upper case dni and ghi cols</p>
 
@@ -324,7 +324,7 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="format_output_as_pvfactor" class="doc_header"><code>format_output_as_pvfactor</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L22" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>format_output_as_pvfactor</code>(<strong><code>res</code></strong>:<code>DataFrame</code>, <strong><code>cuts</code></strong>:<code>int</code>)</p>
+<h4 id="format_output_as_pvfactor" class="doc_header"><code>format_output_as_pvfactor</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L23" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>format_output_as_pvfactor</code>(<strong><code>res</code></strong>:<code>DataFrame</code>, <strong><code>cuts</code></strong>:<code>int</code>)</p>
 </blockquote>
 <p>Formats output from bifacialvf as pvfactor's one</p>
 
@@ -354,7 +354,7 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="bifacialvf_engine_run" class="doc_header"><code>bifacialvf_engine_run</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L34" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>bifacialvf_engine_run</code>(<strong><code>data</code></strong>:<code>DataFrame</code>, <strong><code>pvarray_parameters</code></strong>:<code>dict</code>=<em><code>{'rtr': 8.0, 'sam_header': False, 'cellRows': 7}</code></em>, <strong><code>gps_data</code></strong>:<code>dict</code>=<em><code>{'Name': 'Chambery', 'Latitude': 45.637001, 'Longitude': 5.881, 'Elevation': 235.0, 'TZ': -1.0}</code></em>)</p>
+<h4 id="bifacialvf_engine_run" class="doc_header"><code>bifacialvf_engine_run</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mybifacialvf.py#L35" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>bifacialvf_engine_run</code>(<strong><code>data</code></strong>:<code>DataFrame</code>, <strong><code>pvarray_parameters</code></strong>:<code>dict</code>=<em><code>{'rtr': 8.0, 'sam_header': False, 'cellRows': 7}</code></em>, <strong><code>gps_data</code></strong>:<code>dict</code>=<em><code>{'Name': 'Chambery', 'Latitude': 45.637001, 'Longitude': 5.881, 'Elevation': 235.0, 'TZ': -1.0}</code></em>)</p>
 </blockquote>
 <p>Run bifacialvf on data, with pvarray_parameters at location</p>
 
@@ -384,9 +384,7 @@ summary: "A wrapper around NREL's bifacialvf, you need my version of [bifacialvf
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>  0%|          | 0/720 [00:00&lt;?, ?it/s]/home/tc256760/Apps/bifacialvf/bifacialvf/vf.py:300: RuntimeWarning: divide by zero encountered in double_scalars
-  projectedX2 = PcellX + np.float64(PcellY) / math.tan(startElvDown);      # Projection of ElvDown to ground in +x direction (X1 and X2 opposite nomenclature for front irradiance method)
-  2%|▏         | 17/720 [00:00&lt;00:04, 166.32it/s]</pre>
+<pre>  2%|▏         | 16/720 [00:00&lt;00:04, 159.63it/s]</pre>
 </div>
 </div>
 
@@ -409,7 +407,7 @@ Saving into output.csv
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 720/720 [00:03&lt;00:00, 218.62it/s]</pre>
+<pre>100%|██████████| 720/720 [00:03&lt;00:00, 225.12it/s]</pre>
 </div>
 </div>
 
