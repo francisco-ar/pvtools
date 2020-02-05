@@ -30,19 +30,6 @@ summary: "My custom pvfactors fucntions."
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nbdev.showdoc</span> <span class="kn">import</span> <span class="n">show_doc</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">DATAPATH</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">/</span><span class="s1">&#39;data&#39;</span>
 <span class="n">DATAPATH</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
 </pre></div>
@@ -235,7 +222,7 @@ summary: "My custom pvfactors fucntions."
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="system_def" class="doc_header"><code>system_def</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L14" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>system_def</code>(<strong><code>albedo</code></strong>:<code>float</code>=<em><code>0.4</code></em>, <strong><code>n_modules_vertically</code></strong>:<code>int</code>=<em><code>2</code></em>, <strong><code>module_size</code></strong>:<code>tuple</code>=<em><code>(1.69, 1.01)</code></em>, <strong><code>h_ground</code></strong>:<code>float</code>=<em><code>1</code></em>, <strong><code>surface_tilt</code></strong>:<code>int</code>=<em><code>38</code></em>, <strong><code>axis_azimuth</code></strong>:<code>int</code>=<em><code>0</code></em>, <strong><code>surface_azimuth</code></strong>:<code>int</code>=<em><code>180</code></em>, <strong><code>n_pvrows</code></strong>:<code>int</code>=<em><code>1</code></em>, <strong><code>tracking</code></strong>:<code>bool</code>=<em><code>False</code></em>, <strong><code>gcr</code></strong>:<code>float</code>=<em><code>0.5</code></em>)</p>
+<h4 id="system_def" class="doc_header"><code>system_def</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L15" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>system_def</code>(<strong><code>albedo</code></strong>:<code>float</code>=<em><code>0.4</code></em>, <strong><code>n_modules_vertically</code></strong>:<code>int</code>=<em><code>2</code></em>, <strong><code>module_size</code></strong>:<code>tuple</code>=<em><code>(1.69, 1.01)</code></em>, <strong><code>h_ground</code></strong>:<code>float</code>=<em><code>1</code></em>, <strong><code>surface_tilt</code></strong>:<code>int</code>=<em><code>38</code></em>, <strong><code>axis_azimuth</code></strong>:<code>int</code>=<em><code>0</code></em>, <strong><code>surface_azimuth</code></strong>:<code>int</code>=<em><code>180</code></em>, <strong><code>n_pvrows</code></strong>:<code>int</code>=<em><code>1</code></em>, <strong><code>tracking</code></strong>:<code>bool</code>=<em><code>False</code></em>, <strong><code>gcr</code></strong>:<code>float</code>=<em><code>0.5</code></em>)</p>
 </blockquote>
 <p>A wrapper function to define the pvfactors pvarray_parameters dictionary</p>
 
@@ -306,7 +293,7 @@ summary: "My custom pvfactors fucntions."
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_index" class="doc_header"><code>get_index</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L47" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_index</code>(<strong><code>df</code></strong>, <strong><code>date</code></strong>)</p>
+<h4 id="get_index" class="doc_header"><code>get_index</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L48" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_index</code>(<strong><code>df</code></strong>, <strong><code>date</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -545,7 +532,7 @@ ordered from left to right (along the x-axis) in the 2D geometry.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_idx" class="doc_header"><code>plot_idx</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L50" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_idx</code>(<strong><code>pvarray</code></strong>, <strong><code>idx</code></strong>=<em><code>4550</code></em>, <strong><code>with_index</code></strong>=<em><code>False</code></em>, <strong><code>figsize</code></strong>=<em><code>(10, 3)</code></em>)</p>
+<h4 id="plot_idx" class="doc_header"><code>plot_idx</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L51" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_idx</code>(<strong><code>pvarray</code></strong>, <strong><code>idx</code></strong>=<em><code>4550</code></em>, <strong><code>with_index</code></strong>=<em><code>False</code></em>, <strong><code>figsize</code></strong>=<em><code>(10, 3)</code></em>)</p>
 </blockquote>
 <p>Plot a pvarray at idx</p>
 
@@ -576,7 +563,7 @@ ordered from left to right (along the x-axis) in the 2D geometry.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="fit_and_plot" class="doc_header"><code>fit_and_plot</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L58" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fit_and_plot</code>(<strong><code>data</code></strong>:<code>DataFrame</code>, <strong><code>pvarray_parameters</code></strong>:<code>dict</code>, <strong><code>date</code></strong>:<code>Union</code>[<code>str</code>, <code>int</code>], <strong><code>with_index</code></strong>:<code>bool</code>=<em><code>False</code></em>)</p>
+<h4 id="fit_and_plot" class="doc_header"><code>fit_and_plot</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L59" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fit_and_plot</code>(<strong><code>data</code></strong>:<code>DataFrame</code>, <strong><code>pvarray_params</code></strong>:<code>dict</code>, <strong><code>date</code></strong>:<code>Union</code>[<code>str</code>, <code>int</code>], <strong><code>with_index</code></strong>:<code>bool</code>=<em><code>False</code></em>)</p>
 </blockquote>
 <p>Method to debug a pvfactors pvarray, plots the model at idx</p>
 
@@ -669,7 +656,7 @@ ordered from left to right (along the x-axis) in the 2D geometry.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="join_sun" class="doc_header"><code>join_sun</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L80" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>join_sun</code>(<strong><code>tmy_data</code></strong>:<code>DataFrame</code>, <strong><code>sunpos</code></strong>:<code>DataFrame</code>, <strong><code>pvarray_params</code></strong>:<code>dict</code>)</p>
+<h4 id="join_sun" class="doc_header"><code>join_sun</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L81" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>join_sun</code>(<strong><code>tmy_data</code></strong>:<code>DataFrame</code>, <strong><code>sunpos</code></strong>:<code>DataFrame</code>, <strong><code>pvarray_params</code></strong>:<code>dict</code>)</p>
 </blockquote>
 <p>Concats meteo data with sunpos</p>
 
@@ -920,7 +907,7 @@ ordered from left to right (along the x-axis) in the 2D geometry.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_data" class="doc_header"><code>get_data</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L98" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_data</code>(<strong><code>tmy_file</code></strong>:<code>Union</code>[<code>Path</code>, <code>str</code>], <strong><code>pvarray_params</code></strong>:<code>dict</code>, <strong><code>reader</code></strong>:<code>str</code>=<em><code>'pvgis'</code></em>, <strong><code>coerce_year</code></strong>:<code>int</code>=<em><code>2019</code></em>)</p>
+<h4 id="get_data" class="doc_header"><code>get_data</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L99" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_data</code>(<strong><code>tmy_file</code></strong>:<code>Union</code>[<code>Path</code>, <code>str</code>], <strong><code>pvarray_params</code></strong>:<code>dict</code>, <strong><code>reader</code></strong>:<code>str</code>=<em><code>'pvgis'</code></em>, <strong><code>coerce_year</code></strong>:<code>int</code>=<em><code>2019</code></em>)</p>
 </blockquote>
 <p>A convenience method to read PVGIS and generic tmy files</p>
 
@@ -1607,6 +1594,45 @@ ordered from left to right (along the x-axis) in the 2D geometry.</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:181: RuntimeWarning: invalid value encountered in true_divide
+  vf_pvrow_to_gnd_surf * pvrow_surf_length / gnd_surf_length, 0.)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="run_simulation" class="doc_header"><code>run_simulation</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L132" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>run_simulation</code>(<strong><code>data</code></strong>:<code>DataFrame</code>, <strong><code>pvarray_params</code></strong>:<code>dict</code>)</p>
+</blockquote>
+<p>Fit and run simulation</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1709,13 +1735,13 @@ I reommend taking a tour on the tutorials presented on <a href="https://sunpower
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0be9ca510&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0be9ca3d0&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0c2df1610&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0bea0c3d0&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0bea0ca10&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0bea1db90&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0bea1db50&gt;]</pre>
+<pre>[&lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42adf19b50&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a8e88290&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a84b0d90&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a84128d0&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a8484350&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a841df10&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a841d810&gt;]</pre>
 </div>
 
 </div>
@@ -1872,13 +1898,13 @@ I reommend taking a tour on the tutorials presented on <a href="https://sunpower
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0be9ca510&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0be9ca3d0&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0c2df1610&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0bea0c3d0&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0bea0ca10&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0bea1db90&gt;,
- &lt;pvfactors.geometry.pvrow.TsSegment at 0x7fb0bea1db50&gt;]</pre>
+<pre>[&lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42adf19b50&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a8e88290&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a84b0d90&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a84128d0&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a8484350&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a841df10&gt;,
+ &lt;pvfactors.geometry.pvrow.TsSegment at 0x7f42a841d810&gt;]</pre>
 </div>
 
 </div>
@@ -1956,8 +1982,8 @@ I reommend taking a tour on the tutorials presented on <a href="https://sunpower
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;pvfactors.geometry.timeseries.TsSurface at 0x7fb0bea0c610&gt;,
- &lt;pvfactors.geometry.timeseries.TsSurface at 0x7fb0bea0c590&gt;]</pre>
+<pre>[&lt;pvfactors.geometry.timeseries.TsSurface at 0x7f42a8412990&gt;,
+ &lt;pvfactors.geometry.timeseries.TsSurface at 0x7f42a8412b90&gt;]</pre>
 </div>
 
 </div>
@@ -2014,7 +2040,7 @@ I reommend taking a tour on the tutorials presented on <a href="https://sunpower
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="individual_report" class="doc_header"><code>individual_report</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L131" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>individual_report</code>(<strong><code>pvarray</code></strong>:<code>OrderedPVArray</code>, <strong><code>row</code></strong>:<code>int</code>=<em><code>0</code></em>, <strong><code>index</code></strong>:<code>Index</code>=<em><code>None</code></em>)</p>
+<h4 id="individual_report" class="doc_header"><code>individual_report</code><a href="https://github.com/tcapelle/capetools/tree/master/capetools/modelling/mypvfactors.py#L148" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>individual_report</code>(<strong><code>pvarray</code></strong>:<code>OrderedPVArray</code>, <strong><code>row</code></strong>:<code>int</code>=<em><code>0</code></em>, <strong><code>index</code></strong>:<code>Index</code>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Recover individual backface measures</p>
 

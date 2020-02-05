@@ -42,6 +42,7 @@ index = {"group_monthly": "01_utils.pandas_hacks.ipynb",
          "fit_and_plot": "07_modelling.mypvfactors.ipynb",
          "join_sun": "07_modelling.mypvfactors.ipynb",
          "get_data": "07_modelling.mypvfactors.ipynb",
+         "run_simulation": "07_modelling.mypvfactors.ipynb",
          "individual_report": "07_modelling.mypvfactors.ipynb"}
 
 modules = ["utils/pandas_hacks.py",
