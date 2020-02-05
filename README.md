@@ -19,6 +19,8 @@ I put together a set of tools used to clean data and model bifacial systems usin
 
 As of 02/2019: [bifacialvf](https://github.com/NREL/bifacialvf) has not yet merged this [PR](https://github.com/NREL/bifacialvf/pull/25), the simulate function cannot take arbitrary metereological data on the form of pandas DataFrames. So we are force to install a custom fork of bifacialvf from [here](https://github.com/tcapelle/bifacialvf/p). This is way, a formal release of capetools to PyPI is not possible rght now, so we have to install by cloning from github.
 
+The recommended method is to install capetools on a conda envirnment. Ideally create a `conda env` with `python 3.6` and then clone and install using pip.
+
 `pip install .`
 
 or on editable mode, git clone this repo, and from within the repo install using:
@@ -29,7 +31,7 @@ or on editable mode, git clone this repo, and from within the repo install using
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 from capetools.imports import *
 from capetools.utils.missing import *
 from capetools.utils.tmy import read_pvgis
@@ -43,7 +45,7 @@ from capetools.modelling.mybifacialvf import *
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 PATH = Path.cwd().parent/'data'
 fname = PATH/'pvgis_tmy_chambery.csv'
 ```
@@ -56,7 +58,7 @@ We will ingest a PVGIS downloaded file for Chambery
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 gps_data, months, tmy_data = read_pvgis(fname)
 ```
 
@@ -66,7 +68,7 @@ gps_data, months, tmy_data = read_pvgis(fname)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 tmy_data.head()
 ```
 
@@ -192,7 +194,7 @@ We can quickly look at missing data:
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 plot_missing(tmy_data)
 ```
 
@@ -200,7 +202,7 @@ plot_missing(tmy_data)
 <div class="output_area" markdown="1">
 
 
-![png](docs/images/output_13_0.png)
+![png](docs/images/output_14_0.png)
 
 
 </div>
@@ -215,7 +217,7 @@ as expected, no missing data !
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 params = system_def(n_pvrows=3); params
 ```
 
@@ -248,7 +250,7 @@ params = system_def(n_pvrows=3); params
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 data = get_data(fname, params)
 ```
 
@@ -258,7 +260,7 @@ data = get_data(fname, params)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 pvarray = run_pvfactors_simulation(data, params)
 ```
 
@@ -285,7 +287,7 @@ pvarray = run_pvfactors_simulation(data, params)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 ax = plot_idx(pvarray)
 ax.set_xlim(-2, 10)
 ```
@@ -301,7 +303,7 @@ ax.set_xlim(-2, 10)
 
 
 
-![png](docs/images/output_20_1.png)
+![png](docs/images/output_21_1.png)
 
 
 </div>
@@ -310,7 +312,7 @@ ax.set_xlim(-2, 10)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 res_pvfactors = individual_report(pvarray, index=data.index)
 ```
 
@@ -320,7 +322,7 @@ res_pvfactors = individual_report(pvarray, index=data.index)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 res_pvfactors.head()
 ```
 
@@ -444,7 +446,7 @@ res_pvfactors.head()
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 res_pvfactors['21 June 2019'].plot();
 ```
 
@@ -452,14 +454,7 @@ res_pvfactors['21 June 2019'].plot();
 <div class="output_area" markdown="1">
 
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f0d9c1a2a10>
-
-
-
-
-![png](docs/images/output_23_1.png)
+![png](docs/images/output_24_0.png)
 
 
 </div>
@@ -470,7 +465,7 @@ res_pvfactors['21 June 2019'].plot();
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 res_bifacialvf = run_bifacialvf_simulation(data)
 ```
 
@@ -479,20 +474,20 @@ res_bifacialvf = run_bifacialvf_simulation(data)
 
       0%|          | 0/8760 [00:00<?, ?it/s]/home/tc256760/Apps/bifacialvf/bifacialvf/vf.py:300: RuntimeWarning: divide by zero encountered in double_scalars
       projectedX2 = PcellX + np.float64(PcellY) / math.tan(startElvDown);      # Projection of ElvDown to ground in +x direction (X1 and X2 opposite nomenclature for front irradiance method)
-      0%|          | 37/8760 [00:00<00:24, 358.00it/s]
+      0%|          | 40/8760 [00:00<00:22, 379.91it/s]
 
      
     ********* 
     Running Simulation for TMY3:  Chambery
     Location:   Chambery
     Lat:  45.637001  Long:  5.881  Tz  -1.0
-    Parameters: beta:  0   Sazm:  180   Height:  0.5   rtr separation:  8.0   Row type:  interior   Albedo:  0.2
+    Parameters: beta:  0   Sazm:  180   Height:  0.5   rtr separation:  8.0   Row type:  interior   Albedo:  0.4
     Saving into output.csv
      
      
 
 
-    100%|██████████| 8760/8760 [00:27<00:00, 314.22it/s]
+    100%|██████████| 8760/8760 [00:27<00:00, 314.85it/s]
 
     Finished
 
@@ -506,7 +501,7 @@ res_bifacialvf = run_bifacialvf_simulation(data)
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```
+```python
 res_bifacialvf['21 June 2019'].plot();
 ```
 
@@ -514,14 +509,7 @@ res_bifacialvf['21 June 2019'].plot();
 <div class="output_area" markdown="1">
 
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f0d9b868b10>
-
-
-
-
-![png](docs/images/output_26_1.png)
+![png](docs/images/output_27_0.png)
 
 
 </div>
