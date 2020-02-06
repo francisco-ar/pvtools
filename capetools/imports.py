@@ -16,3 +16,5 @@ import matplotlib.pyplot as plt
 from typing import Dict, Union, Callable, Optional, Tuple
 Number = Union[float, int]
 File = Union[Path, str]
+
+All = slice(None)
