@@ -21,6 +21,12 @@ As of 02/2019: [bifacialvf](https://github.com/NREL/bifacialvf) has not yet merg
 
 The recommended method is to install capetools on a conda envirnment. Ideally create a `conda env` with `python 3.6` and then clone and install using pip.
 
+`conda create --name=your_env_name python=3.7`
+
+`git clone https://github.com/tcapelle/capetools/`
+
+go inside the cloned capetools repo and do:
+
 `pip install .`
 
 or on editable mode, git clone this repo, and from within the repo install using:
@@ -202,7 +208,7 @@ plot_missing(tmy_data)
 <div class="output_area" markdown="1">
 
 
-![png](docs/images/output_14_0.png)
+![png](docs/images/output_17_0.png)
 
 
 </div>
@@ -303,7 +309,7 @@ ax.set_xlim(-2, 10)
 
 
 
-![png](docs/images/output_21_1.png)
+![png](docs/images/output_24_1.png)
 
 
 </div>
@@ -454,7 +460,7 @@ res_pvfactors['21 June 2019'].plot();
 <div class="output_area" markdown="1">
 
 
-![png](docs/images/output_24_0.png)
+![png](docs/images/output_27_0.png)
 
 
 </div>
@@ -509,7 +515,7 @@ res_bifacialvf['21 June 2019'].plot();
 <div class="output_area" markdown="1">
 
 
-![png](docs/images/output_27_0.png)
+![png](docs/images/output_30_0.png)
 
 
 </div>
