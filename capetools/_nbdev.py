@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"group_monthly": "01_utils.pandas_hacks.ipynb",
+index = {"get_files": "00_utils.core.ipynb",
+         "group_monthly": "01_utils.pandas_hacks.ipynb",
          "reindex_monthly_en": "01_utils.pandas_hacks.ipynb",
          "monthly": "01_utils.pandas_hacks.ipynb",
          "DataFrame.normalize": "01_utils.pandas_hacks.ipynb",
@@ -46,7 +47,8 @@ index = {"group_monthly": "01_utils.pandas_hacks.ipynb",
          "run_pvfactors_simulation": "07_modelling.mypvfactors.ipynb",
          "individual_report": "07_modelling.mypvfactors.ipynb"}
 
-modules = ["utils/pandas_hacks.py",
+modules = ["utils/core.py",
+           "utils/pandas_hacks.py",
            "utils/matlab_io.py",
            "utils/tmy.py",
            "utils/missing.py",
