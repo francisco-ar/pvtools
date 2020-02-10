@@ -47,19 +47,19 @@ def min_max(self:Series): return _min_max(self)
 All = slice(None)
 
 # Cell
-def _flatten_cols(df, to_str=False):
+def _flatten_cols(df, to_str=True):
     "Flattens the columns MultiIndex"
     df = df.copy()
     flat_cols = df.columns.to_flat_index()
     if to_str:
-        df.columns = ['.'.join(c) for c in flat_cols]
+        df.columns = ['_'.join(c) for c in flat_cols]
     else:
         df.columns = flat_cols
     return df
 
 # Cell
 @patch
-def flatten_cols(self:DataFrame): return _flatten_cols(self)
+def flatten_cols(self:DataFrame, to_str=True): return _flatten_cols(self, to_str)
 
 # Cell
 def mem_usage(pandas_obj):
