@@ -86,8 +86,8 @@ class MinMaxRemoval(TransformerMixin):
         X = X.copy()
         for c, val in self.d.items():
             m, M, tol = val
-            X[c] = (X[c].mask(np.abs(X[c] - m) < tol, m)  #min replace
-                        .mask(np.abs(X[c] - M) < tol, M)  #max replace
-                        .where((m - tol < X[c]) & (X[c] < M + tol))  #else replace by NaN
+            X[c] = (X[c].mask(np.abs(X[c] - m) < tol, m+tol)  #min replace
+                        .mask(np.abs(X[c] - M) < tol, M-tol)  #max replace
+                        .where((m - tol < X[c]) & (X[c] < M + tol), np.nan)  #else replace by NaN
                    )
         return X
