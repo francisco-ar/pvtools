@@ -16,7 +16,7 @@ def is_day(df: DataFrame, ghi_col='ghi')->DataFrame:
 
 # Cell
 def plot_missing(df: DataFrame, f:Callable[[DataFrame], DataFrame]=pd.isna, ghi_col:Optional[str]=None):
-    "Plot data that satisfies the f function, optional ghi_col to exclude night"
+    "Plot data that satisfies the f  function, optional ghi_col to exclude night"
     if ghi_col is not None:
         df = is_day(df, ghi_col)
     cols = df.columns
