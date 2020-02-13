@@ -1,10 +1,10 @@
 SRC = $(wildcard nbs/*.ipynb)
 
-all: capetools docs
+all: pvtools docs
 
-capetools: $(SRC)
+pvtools: $(SRC)
 	nbdev_build_lib
-	touch capetools
+	touch pvtools
 
 docs_serve: docs
 	cd docs && bundle exec jekyll serve
