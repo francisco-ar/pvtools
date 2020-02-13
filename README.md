@@ -1,4 +1,4 @@
-# capetools 🕶
+# pvtools 🕶
 > A set of python 🐍 tools to process and model PV
 
 
@@ -14,9 +14,9 @@ The recommended method is to install capetools on a conda envirnment. Ideally cr
 
 `git clone https://github.com/tcapelle/capetools/`
 
-go inside the cloned capetools repo and do:
+Now you can install from PyPi:
 
-`pip install .`
+`pip install pvtools`
 
 or on editable mode, git clone this repo, and from within the repo install using:
 
