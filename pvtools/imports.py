@@ -4,6 +4,7 @@ from fastcore.all import *
 from fastprogress.fastprogress import progress_bar
 
 import numpy as np
+np.seterr(divide='ignore', invalid='ignore')
 import pandas as pd
 from pandas import DataFrame, Series
 

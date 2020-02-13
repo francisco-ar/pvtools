@@ -206,20 +206,6 @@ data = get_data(fname, params)
 pvarray = run_pvfactors_simulation(data, params)
 ```
 
-    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:181: RuntimeWarning: invalid value encountered in true_divide
-      vf_pvrow_to_gnd_surf * pvrow_surf_length / gnd_surf_length, 0.)
-    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:181: RuntimeWarning: divide by zero encountered in true_divide
-      vf_pvrow_to_gnd_surf * pvrow_surf_length / gnd_surf_length, 0.)
-    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:531: RuntimeWarning: divide by zero encountered in true_divide
-      vf_1_to_2 = (d1 + d2 - l1 - l2) / (2. * width)
-    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:531: RuntimeWarning: invalid value encountered in true_divide
-      vf_1_to_2 = (d1 + d2 - l1 - l2) / (2. * width)
-    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:607: RuntimeWarning: invalid value encountered in true_divide
-      vf_1_to_2 = np.abs(sum_2 - sum_1) / (2. * width_1)
-    /home/tc256760/anaconda3/envs/fastai/lib/python3.7/site-packages/pvfactors/viewfactors/vfmethods.py:222: RuntimeWarning: invalid value encountered in true_divide
-      vf_i_to_j * length_i / length_j, 0.)
-
-
 ```python
 ax = plot_idx(pvarray)
 ax.set_xlim(-2, 10)
@@ -369,9 +355,7 @@ res_pvfactors['21 June 2019'].plot();
 res_bifacialvf = run_bifacialvf_simulation(data)
 ```
 
-      0%|          | 0/8760 [00:00<?, ?it/s]/home/tc256760/Apps/bifacialvf/bifacialvf/vf.py:300: RuntimeWarning: divide by zero encountered in double_scalars
-      projectedX2 = PcellX + np.float64(PcellY) / math.tan(startElvDown);      # Projection of ElvDown to ground in +x direction (X1 and X2 opposite nomenclature for front irradiance method)
-      0%|          | 40/8760 [00:00<00:22, 379.91it/s]
+      1%|          | 84/8760 [00:00<00:22, 387.11it/s]
 
      
     ********* 
@@ -384,7 +368,7 @@ res_bifacialvf = run_bifacialvf_simulation(data)
      
 
 
-    100%|██████████| 8760/8760 [00:27<00:00, 314.85it/s]
+    100%|██████████| 8760/8760 [00:28<00:00, 307.76it/s]
 
     Finished
 

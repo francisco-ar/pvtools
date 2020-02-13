@@ -3,8 +3,8 @@
 __all__ = ['plot2series', 'add_value_labels', 'plot_yearly_gain']
 
 # Cell
-from capetools.imports import *
-from capetools.utils.pandas_hacks import *
+from ..imports import *
+from .pandas_hacks import *
 
 # Cell
 @delegates(plt.subplots)
