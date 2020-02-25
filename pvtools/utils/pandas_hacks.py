@@ -62,19 +62,22 @@ def _flatten_cols(df, to_str=True):
 def flatten_cols(self:DataFrame, to_str=True): return _flatten_cols(self, to_str)
 
 # Cell
-def mem_usage(pandas_obj):
+def mem_usage(pandas_obj: Union[DataFrame, Series]):
     "Detailed Memory usage of pandas object"
     if isinstance(pandas_obj,pd.DataFrame):
         usage_b = pandas_obj.memory_usage(deep=True).sum()
     else: # we assume if not a df it's a series
         usage_b = pandas_obj.memory_usage(deep=True)
     usage_mb = usage_b / 1024 ** 2 # convert bytes to megabytes
-    return "{:03.2f} MB".format(usage_mb)
+    return f"{usage_mb:03.2f} MB"
 
-def reduce_mem_usage(df):
+def reduce_mem_usage(df: DataFrame, downcast=np.float32, tol:float=1e-7):
+    "Downcast float64 to float32 variables on df"
     df_float = df.select_dtypes(include=['float'])
-    converted_float = df_float.apply(pd.to_numeric,downcast='float')
     optimized_df = df.copy()
-    optimized_df[converted_float.columns] = converted_float
-    print(f'Reducing Memory->before: {mem_usage(df)}, after: {mem_usage(optimized_df)}')
+    optimized_df[df_float.columns] = df_float.astype(dtype=downcast)
+    bad_cols = list(df.columns[(optimized_df-df).abs().mean()>tol])
+    if len(bad_cols)>0:
+        optimized_df.loc[All, bad_cols] = df.loc[All, bad_cols]
+        print(f'Columns {bad_cols} where not replaced due to prec. loss')
     return optimized_df
